@@ -1,6 +1,6 @@
 {% set name = "python-json-logger" %}
-{% set version = "0.1.7" %}
-{% set md5 = "ad0d91ff0edf31a6e11ca9af271e5e92" %}
+{% set version = "0.1.8" %}
+{% set sha256 = "8205cfe7061715de5cd1b37e3565d5b97d0ac13b30ff3ee612554abb6093d640" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ md5 }}
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -29,6 +29,7 @@ test:
 
 about:
   home: http://github.com/madzak/python-json-logger
+  license_file: LICENSE
   license: BSD 2-clause
   license_family: BSD
   summary: 'A python library adding a json log formatter'
@@ -40,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - sodre
+    - ukaratay
