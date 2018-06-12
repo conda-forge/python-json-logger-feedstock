@@ -17,14 +17,16 @@ machines and we can stop writing custom parsers for syslog type records.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-json-logger-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-json-logger-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-json-logger-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-json-logger-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-json-logger-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-json-logger-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/python-json-logger-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/python-json-logger-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/python-json-logger-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/python-json-logger-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/python-json-logger-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/python-json-logger-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-json-logger/badges/version.svg)](https://anaconda.org/conda-forge/python-json-logger)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-json-logger/badges/downloads.svg)](https://anaconda.org/conda-forge/python-json-logger)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--json--logger-green.svg)](https://anaconda.org/conda-forge/python-json-logger) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-json-logger.svg)](https://anaconda.org/conda-forge/python-json-logger) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-json-logger.svg)](https://anaconda.org/conda-forge/python-json-logger) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-json-logger.svg)](https://anaconda.org/conda-forge/python-json-logger) |
 
 Installing python-json-logger
 =============================
