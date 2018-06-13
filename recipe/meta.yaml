@@ -1,6 +1,6 @@
 {% set name = "python-json-logger" %}
-{% set version = "0.1.8" %}
-{% set sha256 = "8205cfe7061715de5cd1b37e3565d5b97d0ac13b30ff3ee612554abb6093d640" %}
+{% set version = "0.1.9" %}
+{% set sha256 = "e3636824d35ba6a15fc39f573588cba63cf46322a5dc86fb2f280229077e9fbe" %}
 
 package:
   name: {{ name|lower }}
@@ -12,13 +12,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
