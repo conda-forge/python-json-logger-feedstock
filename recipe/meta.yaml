@@ -1,6 +1,6 @@
 {% set name = "python-json-logger" %}
-{% set version = "2.0.1" %}
-{% set sha256 = "f26eea7898db40609563bed0a7ca11af12e2a79858632706d835a0f961b7d398" %}
+{% set version = "2.0.4" %}
+{% set sha256 = "764d762175f99fcc4630bd4853b09632acb60a6224acb27ce08cd70f0b1b81bd" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
 
