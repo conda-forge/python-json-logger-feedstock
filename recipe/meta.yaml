@@ -1,32 +1,33 @@
 {% set name = "python-json-logger" %}
 {% set version = "2.0.4" %}
-{% set sha256 = "764d762175f99fcc4630bd4853b09632acb60a6224acb27ce08cd70f0b1b81bd" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python-json-logger-{{ version }}.tar.gz
+  sha256: 764d762175f99fcc4630bd4853b09632acb60a6224acb27ce08cd70f0b1b81bd
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python >=3.7
+  host:
+    - python >=3.6
     - pip
-
   run:
-    - python >=3.7
+    - python >=3.6
 
 test:
   imports:
     - pythonjsonlogger
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://github.com/madzak/python-json-logger
