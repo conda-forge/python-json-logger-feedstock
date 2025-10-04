@@ -150,5 +150,4 @@ Feedstock Maintainers
 
 * [@blink1073](https://github.com/blink1073/)
 * [@sodre](https://github.com/sodre/)
-* [@ukaratay](https://github.com/ukaratay/)
 
