@@ -1,13 +1,13 @@
 {% set name = "python-json-logger" %}
-{% set version = "2.0.7" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python-json-logger-{{ version }}.tar.gz
-  sha256: 23e7ec02d34237c5aa1e29a070193a4ea87583bb4e7f8fd06d3de8264c4b2e1c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 12b7e74b17775e7d565129296105bbe3910842d9d0eb083fc83a6a617aa8df84
 
 build:
   noarch: python
