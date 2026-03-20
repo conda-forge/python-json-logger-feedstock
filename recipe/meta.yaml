@@ -1,6 +1,5 @@
 {% set name = "python-json-logger" %}
 {% set version = "3.2.1" %}
-{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
