@@ -1,5 +1,5 @@
 {% set name = "python-json-logger" %}
-{% set version = "3.2.1" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8eb0554ea17cb75b05d2848bc14fb02fbdbd9d6972120781b974380bfa162008
+  sha256: b396b9e3ed782b09ff9d6e4f1683d46c83ad0d35d2e407c09a9ebbf038f88195
 
 build:
   noarch: python
