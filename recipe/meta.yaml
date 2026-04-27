@@ -1,25 +1,27 @@
 {% set name = "python-json-logger" %}
-{% set version = "2.0.7" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python-json-logger-{{ version }}.tar.gz
-  sha256: 23e7ec02d34237c5aa1e29a070193a4ea87583bb4e7f8fd06d3de8264c4b2e1c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8eb0554ea17cb75b05d2848bc14fb02fbdbd9d6972120781b974380bfa162008
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
   number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
+    - typing_extensions
 
 test:
   imports:
@@ -28,13 +30,14 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}.*
 
 about:
-  home: http://github.com/madzak/python-json-logger
+  home: https://github.com/nhairs/python-json-logger
   license_file: LICENSE
   license: BSD-2-Clause
   license_family: BSD
-  summary: A python library adding a json log formatter
+  summary: JSON Log Formatter for the Python Logging Package
   description: |
     This library is provided to allow standard python logging to output log
     data as json objects. With JSON we can make our logs more readable by
