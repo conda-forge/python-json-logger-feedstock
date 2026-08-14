@@ -1,12 +1,12 @@
-{% set version = "4.1.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: python-json-logger
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/python-json-logger/python_json_logger-{{ version }}.tar.gz
-  sha256: b396b9e3ed782b09ff9d6e4f1683d46c83ad0d35d2e407c09a9ebbf038f88195
+  url: https://pypi.org/packages/source/p/python-json-logger/python-json-logger-{{ version }}.tar.gz
+  sha256: c2de8689c58c09a7cbb47d7cd49a29cd6948647618d7d946fabbe30b865e5a35
 
 build:
   noarch: python
@@ -20,7 +20,6 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - typing_extensions
 
 test:
   imports:
